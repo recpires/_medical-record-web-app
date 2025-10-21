@@ -65,6 +65,17 @@ body {
     font-weight: 300;
 }
 
+.header-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+}
+
 /* Content Area */
 .content {
     flex: 1;
