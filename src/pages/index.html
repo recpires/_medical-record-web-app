@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital NeoVida - Prontuário Médico</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+    <div class="main-container">
+        <header class="header">
+            <h1>Hospital NeoVida</h1>
+            <h2>Bem-vindo ao Sistema de Prontuário Médico</h2>
+        </header>
+        
+        <main class="content">
+            <nav class="navigation">
+                <ul>
+                    <li>
+                        <button type="button" class="btn-secondary" data-new-record>Iniciar novo prontuário</button>
+                    </li>
+                </ul>
+            </nav>
+
+            <form id="hospital-form" class="form-container">
+                <div class="form-group">
+                    <label for="hospital-name">Nome do Hospital:</label>
+                    <input type="text" id="hospital-name" name="hospitalName" required>
+                </div>
+                
+                <button type="button" class="btn-primary" data-save-next>Salvar e continuar</button>
+            </form>
+        </main>
+        
+        <footer class="footer">
+            <p>&copy; 2025 Hospital NeoVida. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+    
+    <!-- scripts obrigatórios -->
+    <script src="../js/storage.js"></script>
+    <script src="../js/flow.js"></script>
+</body>
+</html>

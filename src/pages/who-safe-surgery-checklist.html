@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHO Safe Surgery Checklist</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <style>
+        body {
+            background-color: #e0f7fa; /* Aqua green background */
+            color: #005a9c; /* Blue text color */
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #005a9c;
+        }
+        .checklist {
+            margin-top: 20px;
+        }
+        .checklist-item {
+            margin: 10px 0;
+        }
+        .navigation {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .btn {
+            background-color: #005a9c;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #004080;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>WHO Safe Surgery Checklist</h1>
+        <h2>Before Induction</h2>
+        <div class="checklist">
+            <div class="checklist-item">
+                <input type="checkbox" id="item1">
+                <label for="item1">Confirm patient identity, procedure, and site.</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="item2">
+                <label for="item2">Ensure all team members are introduced.</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="item3">
+                <label for="item3">Confirm availability of necessary equipment and supplies.</label>
+            </div>
+        </div>
+
+        <h2>Before Skin Incision</h2>
+        <div class="checklist">
+            <div class="checklist-item">
+                <input type="checkbox" id="item4">
+                <label for="item4">Antibiotic prophylaxis administered within the last hour.</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="item5">
+                <label for="item5">Correct positioning of the patient.</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="item6">
+                <label for="item6">Ensure all team members confirm their roles.</label>
+            </div>
+        </div>
+
+        <h2>Before Patient Leaves the Operating Room</h2>
+        <div class="checklist">
+            <div class="checklist-item">
+                <input type="checkbox" id="item7">
+                <label for="item7">Confirm the procedure performed and any implants used.</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="item8">
+                <label for="item8">Ensure the patient is stable for transfer.</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="item9">
+                <label for="item9">Review any concerns or issues with the team.</label>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <a href="surgical-checklist.html" class="btn">Previous</a>
+            <a href="rpa-recovery.html" class="btn">Next</a>
+        </div>
+    </div>
+    <form id="who-checklist-form">
+        <button type="button" class="btn-primary" data-save-next>Salvar e continuar</button>
+    </form>
+    <script src="../js/storage.js"></script>
+    <script src="../js/flow.js"></script>
+</body>
+</html>

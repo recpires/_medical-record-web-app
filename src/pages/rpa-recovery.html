@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperação Pós-Anestesia (RPA)</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <header>
+            <h1>Recuperação Pós-Anestesia (RPA)</h1>
+        </header>
+
+        <section>
+            <h2>Monitoramento do Paciente</h2>
+            <p>Acompanhe os sinais vitais e o estado geral do paciente após a anestesia.</p>
+            <ul>
+                <li><strong>Pressão Arterial:</strong> <span id="pressao-arterial">N/A</span></li>
+                <li><strong>Frequência Cardíaca:</strong> <span id="frequencia-cardiaca">N/A</span></li>
+                <li><strong>Frequência Respiratória:</strong> <span id="frequencia-respiratoria">N/A</span></li>
+                <li><strong>Oxigenação:</strong> <span id="oxigenacao">N/A</span></li>
+                <li><strong>Nível de Consciência:</strong> <span id="nivel-consciencia">N/A</span></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Instruções de Recuperação</h2>
+            <p>Certifique-se de seguir as instruções abaixo para garantir uma recuperação segura:</p>
+            <ol>
+                <li>Monitore os sinais vitais a cada 15 minutos.</li>
+                <li>Administre medicamentos conforme prescrição médica.</li>
+                <li>Informe a equipe médica sobre qualquer anormalidade.</li>
+            </ol>
+        </section>
+
+        <form id="rpa-form">
+            <div class="form-buttons">
+                <button type="button" class="btn-primary" data-save-next>Salvar e continuar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../js/validation.js"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/flow.js"></script>
+</body>
+</html>

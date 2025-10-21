@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist Cirúrgico</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <style>
+        body {
+            background-color: #e0f7fa; /* Aqua green background */
+            color: #005a9c; /* Blue text color */
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #00796b; /* Darker aqua green for headings */
+        }
+        .checklist {
+            margin-top: 20px;
+        }
+        .checklist-item {
+            margin: 10px 0;
+        }
+        .checklist-item input {
+            margin-right: 10px;
+        }
+        .navigation {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .btn {
+            background-color: #00796b; /* Aqua green button */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #004d40; /* Darker aqua green on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Checklist Cirúrgico</h1>
+        <form id="surgical-checklist-form" class="checklist">
+            <div class="checklist-item">
+                <input type="checkbox" id="item1">
+                <label for="item1">Confirmação da identidade do paciente</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="item2">
+                <label for="item2">Verificação do procedimento cirúrgico</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="item3">
+                <label for="item3">Revisão dos exames pré-operatórios</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="item4">
+                <label for="item4">Confirmação da anestesia a ser utilizada</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="item5">
+                <label for="item5">Preparação do local cirúrgico</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="item6">
+                <label for="item6">Disponibilidade de equipamentos necessários</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="item7">
+                <label for="item7">Verificação da equipe cirúrgica</label>
+            </div>
+            <button type="button" class="btn-primary" data-save-next>Salvar e continuar</button>
+        </form>
+
+        <div class="navigation">
+            <a href="surgical-planning.html" class="btn">Próximo: Planejamento Cirúrgico</a>
+        </div>
+    </div>
+
+    <script src="../js/storage.js"></script>
+    <script src="../js/flow.js"></script>
+</body>
+</html>

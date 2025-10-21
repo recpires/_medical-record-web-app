@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Alta - Prontuário</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <style>
+        .report-container {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #005a9c;
+        }
+        h2 {
+            color: #007b5f;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .btn {
+            background-color: #007b5f;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #005a9c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="report-container">
+        <header>
+            <h1>Relatório de Alta do Paciente</h1>
+        </header>
+
+        <h2>Resumo da Estadia</h2>
+        <p><strong>Nome do Paciente:</strong> <span id="patient-name"></span></p>
+        <p><strong>Nº do Prontuário:</strong> <span id="patient-record-number"></span></p>
+        <p><strong>Data de Alta:</strong> <span id="discharge-date"></span></p>
+        <p><strong>Diagnóstico Final:</strong> <span id="final-diagnosis"></span></p>
+        <p><strong>Tratamento Realizado:</strong> <span id="treatment-details"></span></p>
+        <p><strong>Instruções de Alta:</strong> <span id="discharge-instructions"></span></p>
+
+        <div class="button-container">
+            <a href="#" class="btn" id="print-report">Imprimir Relatório</a>
+            <a href="#" class="btn" id="export-pdf">Exportar para PDF</a>
+            <a href="#" class="btn" id="share-report">Compartilhar</a>
+            <a href="finalize.html" class="btn">Gerar Alta Hospitalar</a>
+        </div>
+    </div>
+
+    <form id="discharge-form">
+        <!-- Form fields for discharge summary -->
+        <button type="button" class="btn-primary" data-save-next>Salvar e continuar</button>
+    </form>
+
+    <script src="../js/storage.js"></script>
+    <script src="../js/flow.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Pega os dados do prontuário do localStorage
+            const dadosSalvos = localStorage.getItem("prontuarioData");
+
+            if (dadosSalvos) {
+                const formData = JSON.parse(dadosSalvos);
+                document.getElementById("patient-name").textContent = formData.nomePaciente || "N/A";
+                document.getElementById("patient-record-number").textContent = formData.prontuarioNum || "N/A";
+                document.getElementById("discharge-date").textContent = new Date().toLocaleDateString("pt-BR") || "N/A";
+                document.getElementById("final-diagnosis").textContent = formData.diagnosticoFinal || "N/A";
+                document.getElementById("treatment-details").textContent = formData.tratamentoRealizado || "N/A";
+                document.getElementById("discharge-instructions").textContent = formData.instrucoesAlta || "N/A";
+            } else {
+                document.querySelector(".report-container").innerHTML = "<h2>Nenhum dado de prontuário encontrado.</h2>";
+            }
+        });
+    </script>
+
+</body>
+</html>

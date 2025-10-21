@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Prontuário</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <style>
+        .finalize-container {
+            padding: 20px;
+            text-align: center;
+        }
+        .finalize-container h1 {
+            color: #005a9c;
+        }
+        .finalize-buttons {
+            margin-top: 20px;
+        }
+        .btn {
+            background-color: #00bcd4;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #0097a7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="finalize-container">
+        <h1>Finalizar Prontuário</h1>
+        <p>Você completou todas as etapas do prontuário. Agora você pode:</p>
+        
+        <div class="finalize-buttons">
+            <a href="#" class="btn" id="print-report">Imprimir Relatório</a>
+            <a href="#" class="btn" id="export-pdf">Exportar para PDF</a>
+            <a href="#" class="btn" id="share-report">Compartilhar</a>
+            <a href="discharge-report.html" class="btn">Gerar Alta Hospitalar</a>
+        </div>
+    </div>
+
+    <script src="../js/print-share.js"></script>
+    <script src="../js/pdf-export.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/flow.js"></script>
+    <script>
+        document.getElementById("print-report").addEventListener("click", function() {
+            // Implement print functionality
+            window.print();
+        });
+
+        document.getElementById("export-pdf").addEventListener("click", function() {
+            // Implement PDF export functionality
+            exportToPDF(); // Assuming this function is defined in pdf-export.js
+        });
+
+        document.getElementById("share-report").addEventListener("click", function() {
+            // Implement share functionality
+            shareReport(); // Assuming this function is defined in print-share.js
+        });
+    </script>
+
+</body>
+</html>

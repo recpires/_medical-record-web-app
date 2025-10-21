@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Notificação Automática</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <style>
+        body {
+            background-color: #e0f7fa; /* Aqua green background */
+            color: #004d40; /* Dark teal text */
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background-color: #ffffff; /* White background for content */
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #00796b; /* Teal color for headings */
+        }
+        .navigation {
+            margin: 20px 0;
+        }
+        .navigation a {
+            text-decoration: none;
+            color: #00796b;
+            margin-right: 15px;
+        }
+        .notification {
+            background-color: #b2ebf2; /* Light aqua green for notification box */
+            border-left: 5px solid #00796b;
+            padding: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Sistema de Notificação Automática</h1>
+        <div class="navigation">
+            <a href="patient-data.html">Dados do Paciente</a>
+            <a href="clinical-history.html">Histórico Clínico</a>
+            <a href="surgical-planning.html">Planejamento Cirúrgico</a>
+            <a href="surgical-checklist.html">Checklist Cirúrgico</a>
+            <a href="who-safe-surgery-checklist.html">Checklist de Segurança da OMS</a>
+            <a href="rpa-recovery.html">Recuperação Pós-Anestesia</a>
+            <a href="safe-transfer-room.html">Transferência Segura para o Quarto</a>
+            <a href="room-312a-safety-protocol.html">Protocolo de Segurança no Quarto 312-A</a>
+            <a href="automatic-notification.html">Notificação Automática</a>
+            <a href="discharge-report.html">Relatório de Alta</a>
+        </div>
+
+        <div class="notification">
+            <h2>Notificações Recentes</h2>
+            <p>Aqui você pode visualizar as atualizações automáticas sobre o estado do paciente.</p>
+            <ul>
+                <li>Atualização 1: O paciente foi transferido para a sala de recuperação.</li>
+                <li>Atualização 2: A cirurgia foi concluída com sucesso.</li>
+                <li>Atualização 3: O paciente está estável e sob monitoramento.</li>
+            </ul>
+        </div>
+
+        <div class="form-buttons">
+            <!-- Substitua o link por botão -->
+            <button type="button" class="btn-primary" data-save-next>Salvar e continuar</button>
+        </div>
+    </div>
+
+    <!-- Scripts obrigatórios -->
+    <script src="../js/storage.js"></script>
+    <script src="../js/flow.js"></script>
+</body>
+</html>

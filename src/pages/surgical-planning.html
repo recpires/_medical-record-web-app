@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planejamento Cirúrgico</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <header>
+            <h1>Planejamento Cirúrgico</h1>
+        </header>
+
+        <h2>Detalhes do Procedimento</h2>
+        <form id="surgical-planning-form">
+            <label for="procedure-name">Nome do Procedimento:</label>
+            <input type="text" id="procedure-name" name="procedure-name" required>
+
+            <label for="preparations">Preparações Necessárias:</label>
+            <textarea id="preparations" name="preparations" rows="4" required></textarea>
+
+            <label for="surgical-team">Equipe Cirúrgica:</label>
+            <input type="text" id="surgical-team" name="surgical-team" required>
+
+            <label for="anesthesia-type">Tipo de Anestesia:</label>
+            <select id="anesthesia-type" name="anesthesia-type" required>
+                <option value="geral">Geral</option>
+                <option value="local">Local</option>
+                <option value="regional">Regional</option>
+            </select>
+
+            <div class="form-buttons">
+                <button type="button" class="btn-primary" data-save-next>Salvar e continuar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../js/validation.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/flow.js"></script>
+</body>
+</html>
