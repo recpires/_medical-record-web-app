@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exame Físico - Hospital NeoVida</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+    <div class="main-container">
+        <header class="header">
+            <div class="header-logo">
+                <img src="../assets/images/neovida.png" alt="Logo Hospital NeoVida" class="logo">
+            </div>
+            <h1>Exame Físico</h1>
+        </header>
+        
+        <main class="content">
+            <form id="exame-fisico-form" class="form-container">
+                <h3>Sinais Vitais</h3>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="pressao-arterial">Pressão Arterial (mmHg):</label>
+                        <input type="text" id="pressao-arterial" name="pressaoArterial" placeholder="120/80">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="frequencia-cardiaca">Frequência Cardíaca (bpm):</label>
+                        <input type="number" id="frequencia-cardiaca" name="frequenciaCardiaca" placeholder="80">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="frequencia-respiratoria">Frequência Respiratória (irpm):</label>
+                        <input type="number" id="frequencia-respiratoria" name="frequenciaRespiratoria" placeholder="16">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="temperatura">Temperatura (°C):</label>
+                        <input type="number" id="temperatura" name="temperatura" step="0.1" placeholder="36.5">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="saturacao">Saturação O₂ (%):</label>
+                        <input type="number" id="saturacao" name="saturacao" placeholder="98">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="peso">Peso (kg):</label>
+                        <input type="number" id="peso" name="peso" step="0.1" placeholder="70">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="altura">Altura (cm):</label>
+                    <input type="number" id="altura" name="altura" placeholder="170">
+                </div>
+                
+                <h3>Exame Físico Geral</h3>
+                
+                <div class="form-group">
+                    <label for="estado-geral">Estado Geral:</label>
+                    <textarea id="estado-geral" name="estadoGeral" rows="2"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="exame-segmentar">Exame Segmentar:</label>
+                    <textarea id="exame-segmentar" name="exameSegmentar" rows="6"></textarea>
+                </div>
+                
+                <div class="button-group">
+                    <button type="button" class="btn-secondary" data-back>Voltar</button>
+                    <button type="button" class="btn-primary" data-save-next>Salvar e Continuar</button>
+                </div>
+            </form>
+        </main>
+        
+        <footer class="footer">
+            <p>&copy; 2025 Hospital NeoVida. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+    
+    <script src="../js/storage.js"></script>
+    <script src="../js/flow.js"></script>
+</body>
+</html>

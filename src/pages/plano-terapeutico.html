@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano Terapêutico - Hospital NeoVida</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+    <div class="main-container">
+        <header class="header">
+            <div class="header-logo">
+                <img src="../assets/images/neovida.png" alt="Logo Hospital NeoVida" class="logo">
+            </div>
+            <h1>Plano Terapêutico</h1>
+        </header>
+        
+        <main class="content">
+            <form id="plano-terapeutico-form" class="form-container">
+                <div class="form-group">
+                    <label for="prescricao-medicamentos">Prescrição de Medicamentos:</label>
+                    <textarea id="prescricao-medicamentos" name="prescricaoMedicamentos" rows="6" required></textarea>
+                    <small>Incluir nome do medicamento, dose, via de administração e frequência</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="orientacoes">Orientações ao Paciente:</label>
+                    <textarea id="orientacoes" name="orientacoes" rows="4" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cuidados-especiais">Cuidados Especiais:</label>
+                    <textarea id="cuidados-especiais" name="cuidadosEspeciais" rows="3"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="retorno">Data de Retorno:</label>
+                    <input type="date" id="retorno" name="dataRetorno">
+                </div>
+                
+                <div class="form-group">
+                    <label for="observacoes-plano">Observações:</label>
+                    <textarea id="observacoes-plano" name="observacoesPlano" rows="3"></textarea>
+                </div>
+                
+                <div class="button-group">
+                    <button type="button" class="btn-secondary" data-back>Voltar</button>
+                    <button type="button" class="btn-primary" data-save-next>Salvar e Continuar</button>
+                </div>
+            </form>
+        </main>
+        
+        <footer class="footer">
+            <p>&copy; 2025 Hospital NeoVida. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+    
+    <script src="../js/storage.js"></script>
+    <script src="../js/flow.js"></script>
+</body>
+</html>

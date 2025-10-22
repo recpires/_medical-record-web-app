@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolução Médica - Hospital NeoVida</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+    <div class="main-container">
+        <header class="header">
+            <div class="header-logo">
+                <img src="../assets/images/neovida.png" alt="Logo Hospital NeoVida" class="logo">
+            </div>
+            <h1>Evolução Médica</h1>
+        </header>
+        
+        <main class="content">
+            <form id="evolucao-form" class="form-container">
+                <div class="form-group">
+                    <label for="data-evolucao">Data da Evolução:</label>
+                    <input type="datetime-local" id="data-evolucao" name="dataEvolucao" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="evolucao-clinica">Evolução Clínica:</label>
+                    <textarea id="evolucao-clinica" name="evolucaoClinica" rows="6" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="sinais-vitais-evolucao">Sinais Vitais:</label>
+                    <textarea id="sinais-vitais-evolucao" name="sinaisVitaisEvolucao" rows="3"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="conduta">Conduta:</label>
+                    <textarea id="conduta" name="conduta" rows="4" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="medico-responsavel">Médico Responsável:</label>
+                    <input type="text" id="medico-responsavel" name="medicoResponsavel" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="crm">CRM:</label>
+                    <input type="text" id="crm" name="crm" required>
+                </div>
+                
+                <div class="button-group">
+                    <button type="button" class="btn-secondary" data-back>Voltar</button>
+                    <button type="button" class="btn-success" data-save-next>Finalizar Prontuário</button>
+                </div>
+            </form>
+            
+            <div class="summary-section">
+                <h2>Resumo do Prontuário</h2>
+                <div id="resumo-prontuario" class="resumo-container">
+                    <!-- Resumo será gerado dinamicamente -->
+                </div>
+                <button type="button" class="btn-primary" onclick="imprimirProntuario()">Imprimir Prontuário</button>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p>&copy; 2025 Hospital NeoVida. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+    
+    <script src="../js/storage.js"></script>
+    <script src="../js/flow.js"></script>
+    <script>
+        function imprimirProntuario() {
+            window.print();
+        }
+    </script>
+</body>
+</html>

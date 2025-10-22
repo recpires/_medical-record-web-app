@@ -99,3 +99,70 @@
     if (form) window.storage.loadForm(form);
   });
 })();
+
+// Gerenciamento de armazenamento local para prontuários médicos
+const StorageManager = {
+    // Chave principal para armazenar dados
+    STORAGE_KEY: 'prontuarios_medicos',
+    
+    // Salvar dados no localStorage
+    salvar(dados) {
+        try {
+            localStorage.setItem(this.STORAGE_KEY, JSON.stringify(dados));
+            return true;
+        } catch (erro) {
+            console.error('Erro ao salvar dados:', erro);
+            return false;
+        }
+    },
+    
+    // Carregar dados do localStorage
+    carregar() {
+        try {
+            const dados = localStorage.getItem(this.STORAGE_KEY);
+            return dados ? JSON.parse(dados) : null;
+        } catch (erro) {
+            console.error('Erro ao carregar dados:', erro);
+            return null;
+        }
+    },
+    
+    // Limpar todos os dados
+    limpar() {
+        try {
+            localStorage.removeItem(this.STORAGE_KEY);
+            return true;
+        } catch (erro) {
+            console.error('Erro ao limpar dados:', erro);
+            return false;
+        }
+    },
+    
+    // Salvar prontuário atual
+    salvarProntuario(prontuario) {
+        const dados = this.carregar() || { prontuarios: [] };
+        const indice = dados.prontuarios.findIndex(p => p.id === prontuario.id);
+        
+        if (indice >= 0) {
+            dados.prontuarios[indice] = prontuario;
+        } else {
+            prontuario.id = Date.now();
+            dados.prontuarios.push(prontuario);
+        }
+        
+        return this.salvar(dados);
+    },
+    
+    // Obter prontuário por ID
+    obterProntuario(id) {
+        const dados = this.carregar();
+        if (!dados) return null;
+        return dados.prontuarios.find(p => p.id === id);
+    },
+    
+    // Listar todos os prontuários
+    listarProntuarios() {
+        const dados = this.carregar();
+        return dados ? dados.prontuarios : [];
+    }
+};

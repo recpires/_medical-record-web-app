@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico - Hospital NeoVida</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/theme.css">
+</head>
+<body>
+    <div class="main-container">
+        <header class="header">
+            <div class="header-logo">
+                <img src="../assets/images/neovida.png" alt="Logo Hospital NeoVida" class="logo">
+            </div>
+            <h1>Diagnóstico</h1>
+        </header>
+        
+        <main class="content">
+            <form id="diagnostico-form" class="form-container">
+                <div class="form-group">
+                    <label for="hipotese-diagnostica">Hipótese Diagnóstica:</label>
+                    <textarea id="hipotese-diagnostica" name="hipoteseDiagnostica" rows="4" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="diagnostico-principal">Diagnóstico Principal (CID-10):</label>
+                    <input type="text" id="diagnostico-principal" name="diagnosticoPrincipal" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="diagnosticos-secundarios">Diagnósticos Secundários:</label>
+                    <textarea id="diagnosticos-secundarios" name="diagnosticosSecundarios" rows="3"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="exames-solicitados">Exames Solicitados:</label>
+                    <textarea id="exames-solicitados" name="examesSolicitados" rows="4"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="observacoes">Observações:</label>
+                    <textarea id="observacoes" name="observacoes" rows="3"></textarea>
+                </div>
+                
+                <div class="button-group">
+                    <button type="button" class="btn-secondary" data-back>Voltar</button>
+                    <button type="button" class="btn-primary" data-save-next>Salvar e Continuar</button>
+                </div>
+            </form>
+        </main>
+        
+        <footer class="footer">
+            <p>&copy; 2025 Hospital NeoVida. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+    
+    <script src="../js/storage.js"></script>
+    <script src="../js/flow.js"></script>
+</body>
+</html>
